@@ -12,12 +12,13 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">id</th>
-          <th scope="col">title</th>
-          <th scope="col">album</th>
-          <th scope="col">author</th>
-          <th scope="col">editor</th>
-          <th scope="col">length</th>
+          <th scope="col">ID</th>
+          <th scope="col">Title</th>
+          <th scope="col">Album</th>
+          <th scope="col">Author</th>
+          <th scope="col">Editor</th>
+          <th scope="col">Length</th>
+          <th scope="col">Details</th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +30,7 @@
             <td>{{ $song['author'] }}</td>
             <td>{{ $song['editor'] }}</td>
             <td>{{ number_format($song['length'], 2) }}</td>
+            <td><a href="{{ route('songs.show', $song) }}">Details</a></td>
           </tr>
         @endforeach
     </table>

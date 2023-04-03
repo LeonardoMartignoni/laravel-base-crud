@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Songs;
+use App\Models\Song;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,7 +19,7 @@ class SongSeeder extends Seeder
     public function run(Faker $faker)
     {
      for ($i = 0;$i < 20;$i++) {
-        $new_song = new Songs;
+        $new_song = new Song;
 
         $new_song->title = $faker->firstNameFemale();
         $new_song->album = $faker->firstNameFemale();
