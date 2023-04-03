@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('icons')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+@endsection
+
 @section('navbar')
   @include('partials.navbar')
 @endsection
@@ -33,7 +37,7 @@
             <td>{{ $song['author'] }}</td>
             <td>{{ $song['editor'] }}</td>
             <td>{{ number_format($song['length'], 2) }}</td>
-            <td><a href="{{ route('songs.show', $song) }}">Details</a></td>
+            <td><a href="{{ route('songs.show', $song) }}"><i class="bi bi-box-arrow-up-right"></i></a></td>
           </tr>
         @endforeach
     </table>

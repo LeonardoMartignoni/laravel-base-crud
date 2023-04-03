@@ -7,6 +7,8 @@
 
   <title>Laravel 9 + Bootstrap Template</title>
 
+  @yield('icons')
+
   {{-- Includiamo gli assets con la direttiva @vite --}}
   @vite('resources/js/app.js')
 </head>
