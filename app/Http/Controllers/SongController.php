@@ -36,6 +36,15 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'album' => 'required',
+            'author' => 'required',
+            'editor' => 'required',
+            'length' => 'required',
+            'poster' => 'required',
+        ]);
+
         $data = $request->all();
         
         $new_song = new Song();
