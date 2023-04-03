@@ -21,10 +21,10 @@ class SongSeeder extends Seeder
      for ($i = 0;$i < 20;$i++) {
         $new_song = new Songs;
 
-        $new_song->title = $faker->word();
-        $new_song->album = $faker->word();
-        $new_song->author = $faker->word();
-        $new_song->editor = $faker->word();
+        $new_song->title = $faker->firstNameFemale();
+        $new_song->album = $faker->firstNameFemale();
+        $new_song->author = $faker->firstNameMale() . ' ' . $faker->lastName();
+        $new_song->editor = $faker->city();
         $new_song->length = $faker->randomFloat(2, 1, 4);
         $new_song->poster = 'https://picsum.photos/id/237/400/250';
 
