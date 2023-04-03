@@ -8,7 +8,10 @@
   {{-- @dump($songs) --}}
 
   <div class="container">
-    <h1 class="my-2">Songs list</h1>
+    <div class="heading d-flex justify-content-between align-items-center">
+      <h1 class="my-2">Songs list</h1>
+      <a href="{{ route('songs.create') }}" class="btn btn-outline-dark">Create Song</a>
+    </div>
     <table class="table table-striped">
       <thead>
         <tr>

@@ -25,7 +25,7 @@ class SongController extends Controller
      */
     public function create()
     {
-        //
+        return view('songs.create');
     }
 
     /**
