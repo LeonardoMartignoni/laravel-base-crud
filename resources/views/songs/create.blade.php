@@ -8,6 +8,8 @@
   <div class="container">
     <h1 class="my-2">Create song</h1>
     <form action="{{ route('songs.store') }}" method="POST">
+      @csrf
+
       <div class="row g-3">
         <div class="col-6">
           <label for="title" class="form-label">Title</label>

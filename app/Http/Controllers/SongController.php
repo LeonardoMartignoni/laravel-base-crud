@@ -36,7 +36,13 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $new_song = new Song();
+        $new_song->fill($data);
+
+        $new_song->save();
+        return redirect()->route('songs.show', $new_song->id);
     }
 
     /**
