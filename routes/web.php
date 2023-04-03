@@ -14,4 +14,9 @@ use App\Http\Controllers\SongController;
 |
 */
 
-Route::resource('/', SongController::class);
+Route::get('/', function () {
+  return view('home');
+})->name('homepage');
+
+Route::resource('/songs', SongController::class);
+

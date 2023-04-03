@@ -15,8 +15,7 @@ class SongController extends Controller
     public function index()
     {
         $songs = Songs::all();
-        dd($songs);
-        return view('songs');
+        return view('songs', compact('songs'));
     }
 
     /**
