@@ -100,7 +100,7 @@ class SongController extends Controller
         // dd($song);
         $song->save();
 
-        return redirect()->route('songs.index', 'song');
+        return redirect()->route('songs.index');
     }
 
     /**
