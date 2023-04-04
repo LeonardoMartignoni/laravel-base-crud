@@ -37,7 +37,14 @@
             <td>{{ $song['author'] }}</td>
             <td>{{ $song['editor'] }}</td>
             <td>{{ number_format($song['length'], 2) }}</td>
-            <td><a href="{{ route('songs.show', $song) }}"><i class="bi bi-box-arrow-up-right"></i></a></td>
+            <td>
+              <a href="{{ route('songs.show', $song) }}">
+                <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+              <a href="{{ route('songs.edit', $song) }}">
+                <i class="bi bi-pencil-square"></i>
+              </a>
+            </td>
           </tr>
         @endforeach
     </table>

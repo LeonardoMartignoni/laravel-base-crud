@@ -37,12 +37,12 @@ class SongController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'album' => 'required',
-            'author' => 'required',
-            'editor' => 'required',
-            'length' => 'required',
-            'poster' => 'required',
+            'title' => 'required|string',
+            'album' => 'required|string',
+            'author' => 'required|string',
+            'editor' => 'required|string',
+            'length' => 'required|numeric',
+            'poster' => 'required|string',
         ]);
 
         $data = $request->all();
@@ -71,9 +71,9 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Song $song)
     {
-        //
+        return view('songs.edit', compact('song'));
     }
 
     /**
@@ -85,7 +85,7 @@ class SongController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // return redirect()->route('songs.index');
     }
 
     /**
