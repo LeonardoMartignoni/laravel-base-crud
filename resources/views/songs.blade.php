@@ -44,7 +44,7 @@
               <a class="btn btn-action" href="{{ route('songs.edit', $song) }}">
                 <i class="bi bi-pencil-square"></i>
               </a>
-              <button type="submit" class="ms-auto btn btn-action text-danger" data-bs-toggle="modal"
+              <button type="button" class="ms-auto btn btn-action text-danger" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop{{ $song->id }}">
                 <i class="bi bi-trash"></i>
               </button>
