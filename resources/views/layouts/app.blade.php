@@ -20,7 +20,7 @@
     @yield('main-content')
   </main>
 
-  @yield('footer')
+  @yield('modals')
 </body>
 
 </html>
