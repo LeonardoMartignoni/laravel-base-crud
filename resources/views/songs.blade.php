@@ -44,6 +44,13 @@
               <a href="{{ route('songs.edit', $song) }}">
                 <i class="bi bi-pencil-square"></i>
               </a>
+              <form class="delete-button" action="{{ route('songs.destroy', $song->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </form>
             </td>
           </tr>
         @endforeach
