@@ -18,7 +18,7 @@
       </div>
     @endif
 
-    <form action="{{ route('songs.update', 'song') }}" method="POST">
+    <form action="{{ route('songs.update', $song) }}" method="POST">
       @csrf
       @method('PUT')
 

@@ -83,9 +83,24 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Song $song)
     {
-        // return redirect()->route('songs.index');
+        $request->validate([
+            'title' => 'required|string',
+            'album' => 'required|string',
+            'author' => 'required|string',
+            'editor' => 'required|string',
+            'length' => 'required|numeric',
+            'poster' => 'required|string',
+        ]);
+
+        $data = $request->all();
+
+        $song->fill($data);
+        // dd($song);
+        $song->save();
+
+        return redirect()->route('songs.index', 'song');
     }
 
     /**
